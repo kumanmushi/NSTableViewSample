@@ -745,22 +745,25 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="fss-rE-Aqm">
+                                                        <tableCellView id="Yer-Iz-ltg">
                                                             <rect key="frame" x="104" y="1" width="100" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfA-o0-yq3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="bQk-Rz-N87">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ekK-PI-W9O">
+                                                                    <rect key="frame" x="43" y="2" width="14" height="14"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="14" id="Yum-qu-ADg"/>
+                                                                        <constraint firstAttribute="height" constant="14" id="f89-Tr-ZG7"/>
+                                                                    </constraints>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="Xva-Li-zQ1"/>
+                                                                </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="ekK-PI-W9O" firstAttribute="centerY" secondItem="Yer-Iz-ltg" secondAttribute="centerY" id="slk-7Z-DxR"/>
+                                                                <constraint firstItem="ekK-PI-W9O" firstAttribute="centerX" secondItem="Yer-Iz-ltg" secondAttribute="centerX" id="t8D-dZ-S8q"/>
+                                                            </constraints>
                                                             <connections>
-                                                                <outlet property="textField" destination="PfA-o0-yq3" id="VCR-eR-dNx"/>
+                                                                <outlet property="imageView" destination="ekK-PI-W9O" id="ONA-kg-TO4"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -836,4 +839,7 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+    </resources>
 </document>
