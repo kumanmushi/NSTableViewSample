@@ -699,7 +699,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="100" minWidth="40" maxWidth="1000" id="8oy-zw-SSG">
+                                                <tableColumn identifier="String" width="100" minWidth="40" maxWidth="1000" id="8oy-zw-SSG">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="文字">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -732,7 +732,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="100" minWidth="40" maxWidth="1000" id="OqI-vc-niW">
+                                                <tableColumn identifier="Image" width="100" minWidth="40" maxWidth="1000" id="OqI-vc-niW">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="画像">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -765,7 +765,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="269" minWidth="10" maxWidth="3.4028234663852886e+38" id="7iU-If-Lwm">
+                                                <tableColumn identifier="Button" width="269" minWidth="10" maxWidth="3.4028234663852886e+38" id="7iU-If-Lwm">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="ボタン">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
