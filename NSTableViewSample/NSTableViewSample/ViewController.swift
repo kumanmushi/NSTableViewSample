@@ -8,9 +8,9 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
+class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, ButtonTableCellViewDelegte {
 
-    @IBOutlet weak var TableView: NSTableView!
+    @IBOutlet weak var tableView: NSTableView!
     
     private let stringArray: [String] = ["test1", "test2", "test3"]
     private let imageNameArray: [String] = ["test1", "test2", "test3"]
@@ -47,11 +47,27 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             }
             
         case buttonColumn:
-            break
+            guard let cell: ButtonTableCellView =
+                tableView.make(withIdentifier: buttonColumn, owner: self) as? ButtonTableCellView else {
+                    return nil
+            }
+            cell.buttonTableCellViewDelegte = self
+            return cell
         
         default:
             break
         }
         return nil
+    }
+    
+    func didButtonAction(sender: NSButton){
+        var responder = sender.nextResponder
+        while responder != nil {
+            if let cell: NSTableCellView = responder as? NSTableCellView {
+                let row: Int = self.tableView.row(for: cell)
+                print(self.stringArray[row])
+            }
+            responder = responder?.nextResponder
+        }
     }
 }
