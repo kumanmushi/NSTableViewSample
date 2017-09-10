@@ -8,12 +8,50 @@
 
 import Cocoa
 
+protocol ButtonTableCellViewDelegte: class {
+    func didButtonAction(sender: NSButton)
+}
+
 class ButtonTableCellView: NSTableCellView {
+    
+    weak var buttonTableCellViewDelegte: ButtonTableCellViewDelegte?
 
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
+    // MARK: - Initialize
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.loadXib()
     }
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        self.loadXib()
+    }
+    
+    // MARK: - Private Method
+    private func loadXib() {
+        var topLevelObjects = NSArray()
+        let nibName: String = "ButtonTableCellView"
+        if Bundle.main.loadNibNamed(nibName, owner: self, topLevelObjects: &topLevelObjects) {
+            let filteredTopLevelObject = topLevelObjects.filter {$0 is NSView}
+            guard let buttonTableCellView: NSView = filteredTopLevelObject.first as? NSView else {
+                return
+            }
+            buttonTableCellView.frame = self.bounds
+            self.addSubview(buttonTableCellView)
+            guard let superView: NSView = buttonTableCellView.superview else {
+                return
+            }
+            
+            buttonTableCellView.translatesAutoresizingMaskIntoConstraints = false
+            buttonTableCellView.topAnchor.constraint(equalTo: superView.topAnchor, constant: 0.0).isActive = true
+            buttonTableCellView.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 0.0).isActive = true
+            buttonTableCellView.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: 0.0).isActive = true
+            buttonTableCellView.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: 0.0).isActive = true
+        }
+    }
+
+    
+    @IBAction func buttonAction(_ sender: NSButton) {
+        self.buttonTableCellViewDelegte?.didButtonAction(sender: sender)
+    }
 }
