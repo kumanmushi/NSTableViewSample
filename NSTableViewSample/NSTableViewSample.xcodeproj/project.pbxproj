@@ -13,6 +13,11 @@
 		924E42411F62E574003C8BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924E423F1F62E574003C8BDE /* Main.storyboard */; };
 		924E424C1F62E574003C8BDE /* NSTableViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E424B1F62E574003C8BDE /* NSTableViewSampleTests.swift */; };
 		924E42571F62E574003C8BDE /* NSTableViewSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E42561F62E574003C8BDE /* NSTableViewSampleUITests.swift */; };
+		924E42671F62FC8A003C8BDE /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = 924E42641F62FC8A003C8BDE /* test1.png */; };
+		924E42681F62FC8A003C8BDE /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 924E42651F62FC8A003C8BDE /* test2.png */; };
+		924E42691F62FC8A003C8BDE /* test3.png in Resources */ = {isa = PBXBuildFile; fileRef = 924E42661F62FC8A003C8BDE /* test3.png */; };
+		924E426B1F6533FE003C8BDE /* ButtonTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924E426A1F6533FE003C8BDE /* ButtonTableCellView.xib */; };
+		924E426D1F6535CC003C8BDE /* ButtonTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E426C1F6535CC003C8BDE /* ButtonTableCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		924E42521F62E574003C8BDE /* NSTableViewSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSTableViewSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		924E42561F62E574003C8BDE /* NSTableViewSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTableViewSampleUITests.swift; sourceTree = "<group>"; };
 		924E42581F62E574003C8BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		924E42641F62FC8A003C8BDE /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
+		924E42651F62FC8A003C8BDE /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
+		924E42661F62FC8A003C8BDE /* test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test3.png; sourceTree = "<group>"; };
+		924E426A1F6533FE003C8BDE /* ButtonTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTableCellView.xib; sourceTree = "<group>"; };
+		924E426C1F6535CC003C8BDE /* ButtonTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,9 @@
 		924E422D1F62E574003C8BDE = {
 			isa = PBXGroup;
 			children = (
+				924E42641F62FC8A003C8BDE /* test1.png */,
+				924E42651F62FC8A003C8BDE /* test2.png */,
+				924E42661F62FC8A003C8BDE /* test3.png */,
 				924E42381F62E574003C8BDE /* NSTableViewSample */,
 				924E424A1F62E574003C8BDE /* NSTableViewSampleTests */,
 				924E42551F62E574003C8BDE /* NSTableViewSampleUITests */,
@@ -100,6 +113,8 @@
 				924E423D1F62E574003C8BDE /* Assets.xcassets */,
 				924E423F1F62E574003C8BDE /* Main.storyboard */,
 				924E42421F62E574003C8BDE /* Info.plist */,
+				924E426A1F6533FE003C8BDE /* ButtonTableCellView.xib */,
+				924E426C1F6535CC003C8BDE /* ButtonTableCellView.swift */,
 			);
 			path = NSTableViewSample;
 			sourceTree = "<group>";
@@ -232,8 +247,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924E42681F62FC8A003C8BDE /* test2.png in Resources */,
+				924E42691F62FC8A003C8BDE /* test3.png in Resources */,
 				924E423E1F62E574003C8BDE /* Assets.xcassets in Resources */,
+				924E426B1F6533FE003C8BDE /* ButtonTableCellView.xib in Resources */,
 				924E42411F62E574003C8BDE /* Main.storyboard in Resources */,
+				924E42671F62FC8A003C8BDE /* test1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +279,7 @@
 			files = (
 				924E423C1F62E574003C8BDE /* ViewController.swift in Sources */,
 				924E423A1F62E574003C8BDE /* AppDelegate.swift in Sources */,
+				924E426D1F6535CC003C8BDE /* ButtonTableCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +527,7 @@
 				924E425D1F62E574003C8BDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		924E425E1F62E574003C8BDE /* Build configuration list for PBXNativeTarget "NSTableViewSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +536,7 @@
 				924E42601F62E574003C8BDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		924E42611F62E574003C8BDE /* Build configuration list for PBXNativeTarget "NSTableViewSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +545,7 @@
 				924E42631F62E574003C8BDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
